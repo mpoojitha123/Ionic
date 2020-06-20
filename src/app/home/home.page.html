@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+  <ion-button routerLink="/about"><ion-icon name="list-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+<h1>Calculator</h1><br>
+<ion-item>
+<ion-label class="value">
+{{value}}
+</ion-label>
+</ion-item>
+<div *ngFor="let numGroup of numberGroups">
+<ion-button  *ngFor="let num of numGroup" (click)="onButtonPress(num)" class="calc-button">{{num}}</ion-button>
+</div>
+</ion-content>
+
+
+
